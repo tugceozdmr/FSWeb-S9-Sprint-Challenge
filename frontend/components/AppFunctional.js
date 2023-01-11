@@ -107,16 +107,16 @@ export default function AppFunctional(props) {
         <h3 id="message">{mesaj}</h3>
       </div>
       <div id="keypad">
-        <button id="left" onClick={solaGit} data-testid="left-button">
+        <button id="left" onClick={solaGit} data-testid="left-butt">
           SOL
         </button>
-        <button id="up" onClick={yukariGit} data-testid="up-button">
+        <button id="up" onClick={yukariGit} data-testid="up-butt">
           YUKARI
         </button>
-        <button id="right" onClick={sagaGit} data-testid="right-button">
+        <button id="right" onClick={sagaGit} data-testid="right-butt">
           SAĞ
         </button>
-        <button id="down" onClick={asagiGit} data-testid="down-button">
+        <button id="down" onClick={asagiGit} data-testid="down-butt">
           AŞAĞI
         </button>
         <button id="reset" onClick={reset}>
@@ -129,7 +129,7 @@ export default function AppFunctional(props) {
           type="email"
           placeholder="email girin"
           onChange={onChange}
-          data-testid="email-input"
+          data-testid="email"
         ></input>
         <input id="submit" type="submit" data-testid="submit-button"></input>
       </form>
