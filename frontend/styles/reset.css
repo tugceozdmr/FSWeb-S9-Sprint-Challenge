@@ -59,4 +59,5 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  background-color: #ea9085;
 }

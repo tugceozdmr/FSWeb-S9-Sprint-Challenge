@@ -1,28 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-//(y-1)*3+(x-1)
 
 export default function AppFunctional(props) {
-  // AŞAĞIDAKİ HELPERLAR SADECE ÖNERİDİR.
-  // Bunları silip kendi mantığınızla sıfırdan geliştirebilirsiniz.
-
-  //1)konumu state'te tuttum.
-  const [konum, setKonum] = useState([2, 2]);
-
-  //2hamle sayısını tutmak için ikinci state
-
+  const [konum, setKonum] = useState([3, 3]);
   const [hamleSayisi, setHamleSayisi] = useState(0);
-
-  //hata mesajı için;
   const [mesaj, setMesaj] = useState("");
   const [email, setEmail] = useState("");
 
-  const konumAsIndex = (konum[1] - 1) * 3 + konum[0] - 1;
-  console.log(konum, konumAsIndex);
+  const konumAsIndex = (konum[1] - 1) * 5 + konum[0] - 1;
 
   function sagaGit() {
-    if (konum[0] < 3) {
+    if (konum[0] < 5) {
       setKonum([konum[0] + 1, konum[1]]);
       setHamleSayisi(hamleSayisi + 1);
     } else {
@@ -40,11 +29,12 @@ export default function AppFunctional(props) {
   }
 
   function asagiGit() {
-    if (konum[1] < 3) {
+    if (konum[1] < 5) {
       setKonum([konum[0], konum[1] + 1]);
+      //console.log(konum, konumAsIndex);
       setHamleSayisi(hamleSayisi + 1);
     } else {
-      setMesaj("aşağı gidemezsiniz");
+      setMesaj("Aşağı gidemezsiniz.");
     }
   }
 
@@ -53,12 +43,12 @@ export default function AppFunctional(props) {
       setKonum([konum[0], konum[1] - 1]);
       setHamleSayisi(hamleSayisi + 1);
     } else {
-      setMesaj("yukarı gidemezsiniz");
+      setMesaj("Yukarı gidemezsiniz.");
     }
   }
 
   function reset() {
-    setKonum([2, 2]);
+    setKonum([3, 3]);
     setHamleSayisi(0);
     setMesaj("");
     setEmail("");
@@ -89,15 +79,22 @@ export default function AppFunctional(props) {
       });
   };
 
+
+  const yirmibes= []
+  for( let i=0; i<=24 ; i++){
+    yirmibes.push(i)
+  }
+
+
+
   return (
     <div id="wrapper" className={props.className}>
       <div className="info">
-        {console.log(konum)}
         <h3 id="coordinates">Koordinatlar ({konum.join(", ")})</h3>
         <h3 id="steps">{hamleSayisi} kere ilerlediniz</h3>
       </div>
       <div id="grid">
-        {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((idx) => (
+   {yirmibes.map((idx) => (
           <div
             key={idx}
             className={`square${idx === konumAsIndex ? " active" : ""}`}

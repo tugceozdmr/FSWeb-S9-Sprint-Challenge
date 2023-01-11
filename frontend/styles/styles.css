@@ -33,7 +33,7 @@ body, input, button {
 h1 {
   font-size: 1.8rem;
   line-height: 4rem;
-  color: #93005a;
+  color: #4f323b; 
 }
 
 nav a {
@@ -48,7 +48,7 @@ nav a.active:nth-last-of-type(1) {
 }
 
 nav a.active:nth-last-of-type(2) {
-  color: #ff4b00;
+  color:#ff7e67;
 }
 
 .info {
@@ -65,22 +65,27 @@ nav a.active:nth-last-of-type(2) {
 
 #coordinates, #steps {
   font-size: 1.2rem;
+  background-color: white;
+  color:#4f323b; 
 }
 
 #message {
   font-size: 1.2rem;
-  color: #00808c;
-  font-style: italic;
+  color:#4f323b;;
+  font-style:oblique;
+  font-size: larger;
+  background-color: white;
 }
 
 .class-based #message {
-  color: #ff4b00;
+  color:#ff7e67;
 }
 
 #grid {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 60px 60px 60px 60px 60px;
+  grid-template-rows: 60px 60px 60px 60px 60px;
+
 }
 
 #grid .square {
@@ -94,11 +99,11 @@ nav a.active:nth-last-of-type(2) {
 }
 
 .class-based #grid .square, .functional #grid .square.active {
-  background-color: #00808c
+  background-color: #4f323b; 
 }
 
 .class-based #grid .square.active, .functional #grid .square {
-  background-color: #ff4b00;
+  background-color:#e9e2d0;
 }
 
 #keypad {

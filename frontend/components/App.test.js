@@ -35,14 +35,14 @@ test("aşağı butonu çalışıyor ve hata geliyor", () => {
   const dbutton = screen.getByTestId("down-button");
   fireEvent.click(dbutton);
   fireEvent.click(dbutton);
-  expect(screen.getByText("aşağı gidemezsiniz")).toBeInTheDocument();
+  expect(screen.getByText("Aşağı gidemezsiniz.")).toBeInTheDocument();
 });
 test("yukarı butonu çalışıyor ve hata geliyor", () => {
   render(<AppFunctional />);
   const upbutton = screen.getByTestId("up-button");
   fireEvent.click(upbutton);
   fireEvent.click(upbutton);
-  expect(screen.getByText("yukarı gidemezsiniz")).toBeInTheDocument();
+  expect(screen.getByText("Yukarı gidemezsiniz.")).toBeInTheDocument();
 });
 test("sağa gitme butonu çalışıyor ve hata geliyor", () => {
   render(<AppFunctional />);
